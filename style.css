@@ -1,3 +1,31 @@
+@keyframes flip-to {
+  0% {
+    transform: rotateY(0);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+@keyframes flip-from {
+  0% {
+    transform: rotateY(-180deg);
+  }
+
+  50% {
+    transform: rotateY(0);
+  }
+
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +35,232 @@
 img {
   width: 100%;
   height: auto;
+}
+
+body {
+  background: #6600CC;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 0 50px;
+  max-width: 2100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 220px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front {
+  animation: flip-to;
+}
+
+.flip-card-back {
+  animation: flip-from;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+.flip-card:nth-child(1) .flip-card-front,
+.flip-card:nth-child(1) .flip-card-back {
+  animation-delay: 1s;
+}
+
+.flip-card:nth-child(2) .flip-card-front,
+.flip-card:nth-child(2) .flip-card-back {
+  animation-delay: 0.3s;
+}
+
+.flip-card:nth-child(3) .flip-card-front,
+.flip-card:nth-child(3) .flip-card-back {
+  animation-delay: 5s;
+}
+
+.flip-card:nth-child(4) .flip-card-front,
+.flip-card:nth-child(4) .flip-card-back {
+  animation-delay: 4.2s;
+}
+
+.flip-card:nth-child(5) .flip-card-front,
+.flip-card:nth-child(5) .flip-card-back {
+  animation-delay: 2.4s;
+}
+
+.flip-card:nth-child(6) .flip-card-front,
+.flip-card:nth-child(6) .flip-card-back {
+  animation-delay: 0.5s;
+}
+
+.flip-card:nth-child(7) .flip-card-front,
+.flip-card:nth-child(7) .flip-card-back {
+  animation-delay: 3.7s;
+}
+
+.flip-card:nth-child(8) .flip-card-front,
+.flip-card:nth-child(8) .flip-card-back {
+  animation-delay: 4.7s;
+}
+
+.flip-card:nth-child(9) .flip-card-front,
+.flip-card:nth-child(9) .flip-card-back {
+  animation-delay: 2s;
+}
+
+.flip-card:nth-child(10) .flip-card-front,
+.flip-card:nth-child(10) .flip-card-back {
+  animation-delay: 3s;
+}
+
+.flip-card:nth-child(11) .flip-card-front,
+.flip-card:nth-child(11) .flip-card-back {
+  animation-delay: 4.8s;
+}
+
+.flip-card:nth-child(12) .flip-card-front,
+.flip-card:nth-child(12) .flip-card-back {
+  animation-delay: 1.5s;
+}
+
+.flip-card:nth-child(13) .flip-card-front,
+.flip-card:nth-child(13) .flip-card-back {
+  animation-delay: 4s;
+}
+
+.flip-card:nth-child(14) .flip-card-front,
+.flip-card:nth-child(14) .flip-card-back {
+  animation-delay: 1s;
+}
+
+.flip-card:nth-child(15) .flip-card-front,
+.flip-card:nth-child(15) .flip-card-back {
+  animation-delay: 0.3s;
+}
+
+.flip-card:nth-child(16) .flip-card-front,
+.flip-card:nth-child(16) .flip-card-back {
+  animation-delay: 5s;
+}
+
+.flip-card:nth-child(17) .flip-card-front,
+.flip-card:nth-child(17) .flip-card-back {
+  animation-delay: 4.2s;
+}
+
+.flip-card:nth-child(18) .flip-card-front,
+.flip-card:nth-child(18) .flip-card-back {
+  animation-delay: 2.4s;
+}
+
+.flip-card:nth-child(19) .flip-card-front,
+.flip-card:nth-child(19) .flip-card-back {
+  animation-delay: 0.5s;
+}
+
+.flip-card:nth-child(20) .flip-card-front,
+.flip-card:nth-child(20) .flip-card-back {
+  animation-delay: 3.7s;
+}
+
+.flip-card:nth-child(21) .flip-card-front,
+.flip-card:nth-child(21) .flip-card-back {
+  animation-delay: 4.7s;
+}
+
+.flip-card:nth-child(22) .flip-card-front,
+.flip-card:nth-child(22) .flip-card-back {
+  animation-delay: 2s;
+}
+
+.flip-card:nth-child(23) .flip-card-front,
+.flip-card:nth-child(23) .flip-card-back {
+  animation-delay: 3s;
+}
+
+.flip-card:nth-child(24) .flip-card-front,
+.flip-card:nth-child(24) .flip-card-back {
+  animation-delay: 4.8s;
+}
+
+.flip-card:nth-child(25) .flip-card-front,
+.flip-card:nth-child(25) .flip-card-back {
+  animation-delay: 1.5s;
+}
+
+.flip-card:nth-child(26) .flip-card-front,
+.flip-card:nth-child(26) .flip-card-back {
+  animation-delay: 4s;
+}
+
+.flip-card:nth-child(27) .flip-card-front,
+.flip-card:nth-child(27) .flip-card-back {
+  animation-delay: 1s;
+}
+
+.flip-card:nth-child(28) .flip-card-front,
+.flip-card:nth-child(28) .flip-card-back {
+  animation-delay: 0.3s;
+}
+
+.flip-card:nth-child(29) .flip-card-front,
+.flip-card:nth-child(29) .flip-card-back {
+  animation-delay: 5s;
+}
+
+.flip-card:nth-child(30) .flip-card-front,
+.flip-card:nth-child(30) .flip-card-back {
+  animation-delay: 4.2s;
+}
+
+.flip-card:nth-child(31) .flip-card-front,
+.flip-card:nth-child(31) .flip-card-back {
+  animation-delay: 2.4s;
+}
+
+.flip-card:nth-child(32) .flip-card-front,
+.flip-card:nth-child(32) .flip-card-back {
+  animation-delay: 0.5s;
+}
+
+.flip-card:nth-child(33) .flip-card-front,
+.flip-card:nth-child(33) .flip-card-back {
+  animation-delay: 3.7s;
+}
+
+.flip-card:nth-child(34) .flip-card-front,
+.flip-card:nth-child(34) .flip-card-back {
+  animation-delay: 4.7s;
+}
+
+.flip-card:nth-child(35) .flip-card-front,
+.flip-card:nth-child(35) .flip-card-back {
+  animation-delay: 2s;
+}
+
+.flip-card:nth-child(36) .flip-card-front,
+.flip-card:nth-child(36) .flip-card-back {
+  animation-delay: 3s;
 }
